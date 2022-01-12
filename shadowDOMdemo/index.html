@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shadow DOM demo</title>
+    <script>
+        'use strict';
+        document.addEventListener('DOMContentLoaded', function () {
+            var shadow = document.querySelector('#shadowHost')
+                .attachShadow({
+                    mode: "open"
+                });
+            shadow.innerHTML = "<h2 style='color:red;''>This headline is placed in the shadow DOM.</h2>";
+        });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Shadow DOM demo</h1>
+    </header>
+
+    <main>
+
+        <h2>This headline is placed in the "regular" DOM.</h2>
+
+        <div id="shadowHost"></div>
+    </main>
+
+</body>
+
+</html>
