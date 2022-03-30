@@ -8,8 +8,11 @@
             font-family: sans-serif;
         }
         
+        #shadowHost {
+            color: red;
+        }
+            
     </style>
-    
     <script>
         'use strict';
         document.addEventListener('DOMContentLoaded', function () {
@@ -17,7 +20,8 @@
                 .attachShadow({
                     mode: "open"
                 });
-            shadow.innerHTML = "<style> #shadowHost { color: red; } </style>";
+            shadow.innerHTML = "<h2>This headline is placed in the shadow DOM.</h2>" + 
+                "<p>Shadow DOM Lorem Ipsum is simply shadowy dummy text of the printing and typesetting industry.</p>";
         });
     </script>
 </head>
@@ -33,11 +37,7 @@
         <h2>This content is placed in the regular DOM.</h2>
         <p>Regular Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
-        <div id="shadowHost">
-            <h2>This headline is placed in the shadow DOM.</h2>
-            <p>Shadow DOM Lorem Ipsum is simply shadowy dummy text of the printing and typesetting industry.</p>
-            
-        </div>
+        <div id="shadowHost"></div>
     </main>
 
 </body>
