@@ -21,16 +21,22 @@
                 return 0; //It is not IE
         }
 
-        if (GetIEVersion() > 0)
-            alert("This is IE " + GetIEVersion());
-        else
+        if (GetIEVersion() > 0) {
+            var message = "This is IE " + GetIEVersion();
+            alert("message");
+            document.getElementById("message").innerText = message;
+        }
+        else {
             alert("This is not IE.");
+            document.getElementById("message").innerText = "This is not IE.";
+        }
+
     </script>
 </head>
 
 <body>
     <h1 class="title">Hello World! </h1>
-    <p id="currentTime"></p>
+    <p id="message"></p>
     <script src="script.js"></script>
 </body>
 
