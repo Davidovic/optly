@@ -23,11 +23,9 @@
 
         if (GetIEVersion() > 0) {
             var message = "This is IE " + GetIEVersion();
-            alert("message");
             document.getElementById("message").innerText = message;
         }
         else {
-            alert("This is not IE.");
             document.getElementById("message").innerText = "This is not IE.";
         }
 
