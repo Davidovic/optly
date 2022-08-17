@@ -1,9 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="https://edge.davidvanderlinde.com/edge-client/v1/20091035168/21258340120" referrerpolicy="no-referrer-when-downgrade"></script>
-        <!--<script src="https://cdn.optimizely.com/js/20091035168.js"></script>-->
-        <!--<script src="https://cdn.optimizely.com/public/20091035168/s/customSnippet1.js"></script>-->
+        <!--<script src="https://edge.davidvanderlinde.com/edge-client/v1/20091035168/21258340120" referrerpolicy="no-referrer-when-downgrade"></script>-->
+        
+        
+        // define Optimizely as an empty array if it doesn't exist yet
+        window["optimizely"] = window["optimizely"] || [];
+        
+        // Push the optOut property to the empty array
+        window["optimizely"].push({
+         "type": "optOut",
+         "isOptOut": true
+        });
+        </script>
+        
+        // Add the Optimizely snippet        
+        <script src="https://cdn.optimizely.com/js/20091035168.js"></script>
+        
+        <!--<script>
+            setTimeout(function() {
+                window["optimizely"].push({
+                    "type": "optOut",
+                    "isOptOut": false
+                });
+            }, 10000);
+            
+        </script>-->
+        
 
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
