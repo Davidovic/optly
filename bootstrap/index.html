@@ -5,10 +5,10 @@
         
         <script>
             // define Optimizely as an empty array if it doesn't exist yet
-            window["optimizely"] = window["optimizely"] || [];
+            window.optimizely = window.optimizely || [];
 
             // Push the optOut property to the empty array
-            window["optimizely"].push({
+            window.optimizely.push({
              "type": "optOut",
              "isOptOut": true
             });
@@ -16,16 +16,6 @@
         
         <!-- Add the Optimizely snippet -->        
         <script src="https://cdn.optimizely.com/js/20091035168.js"></script>
-        
-        <!--<script>
-            setTimeout(function() {
-                window["optimizely"].push({
-                    "type": "optOut",
-                    "isOptOut": false
-                });
-            }, 10000);
-            
-        </script>-->
         
 
         <!-- Google Tag Manager -->
