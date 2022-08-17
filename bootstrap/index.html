@@ -9,7 +9,7 @@
             console.log("optimizely = " + window.optimizely);
 
             // Push the optOut property to the empty array
-            if (window.optimizely.push({"type": "optOut", "isOptOut": true});) {
+            if (window.optimizely.push({"type": "optOut", "isOptOut": true})) {
                 console.log("pushed 'isOptOut = true'");
             } else {
                 console.log("pushing 'isOptOut = true' failed!');
