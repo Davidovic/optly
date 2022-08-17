@@ -3,15 +3,15 @@
     <head>
         <!--<script src="https://edge.davidvanderlinde.com/edge-client/v1/20091035168/21258340120" referrerpolicy="no-referrer-when-downgrade"></script>-->
         
-        
-        // define Optimizely as an empty array if it doesn't exist yet
-        window["optimizely"] = window["optimizely"] || [];
-        
-        // Push the optOut property to the empty array
-        window["optimizely"].push({
-         "type": "optOut",
-         "isOptOut": true
-        });
+        <script>
+            // define Optimizely as an empty array if it doesn't exist yet
+            window["optimizely"] = window["optimizely"] || [];
+
+            // Push the optOut property to the empty array
+            window["optimizely"].push({
+             "type": "optOut",
+             "isOptOut": true
+            });
         </script>
         
         // Add the Optimizely snippet        
