@@ -36,12 +36,14 @@
             // Check the OptanonConsent cookie and enable Optimizely
             var consentGiven = getCookie("OptanonConsent");
             if (consentGiven) {
+                console.log("consent was given");
                 window["optimizely"].push({
                     "type": "optOut",
                     "isOptOut": false
                 });
+            } else {
+                console.log("consent was NOT given");   
             }
-            
         </script>
         
         <!-- Add the Optimizely snippet -->        
