@@ -4,15 +4,42 @@
         <!--<script src="https://edge.davidvanderlinde.com/edge-client/v1/20091035168/21258340120" referrerpolicy="no-referrer-when-downgrade"></script>-->
         
         <script>
-            // define Optimizely as an empty array if it doesn't exist yet
+            
+            // getCookie function
+            function getCookie(cname) {
+              let name = cname + "=";
+              let decodedCookie = decodeURIComponent(document.cookie);
+              let ca = decodedCookie.split(';');
+              for(let i = 0; i <ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                  c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                  return c.substring(name.length, c.length);
+                }
+              }
+              return "";
+            }
+            
+            
+            // Define Optimizely as an empty array if it doesn't exist yet
             window.optimizely = window.optimizely || [];
-            console.log("optimizely = " + window.optimizely);
 
-            // Push the optOut property to the empty array
-            if (window.optimizely.push({"type": "optOut", "isOptOut": true})) {
-                console.log("pushed 'isOptOut = true'");
-            } else {
-                console.log("pushing 'isOptOut = true' failed!");
+            // Push the optOut property to prevent Optimizely from executing
+            window.optimizely.push({"type": "optOut", "isOptOut": true})
+            window["optimizely"].push({
+              "type": "optOut",
+              "isOptOut": true
+            });
+           
+            // Check the OptanonConsent cookie and enable Optimizely
+            var consentGiven = getCookie("OptanonConsent");
+            if (consentGiven) {
+                window["optimizely"].push({
+                    "type": "optOut",
+                    "isOptOut": false
+                });
             }
             
         </script>
