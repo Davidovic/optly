@@ -34,7 +34,7 @@
             });
            
             // Check the OptanonConsent cookie and enable Optimizely
-            var consentGiven = getCookie("OptanonConsent");
+            var consentGiven = getCookie("cookieConsent");
             if (consentGiven === "true") {
                 console.log("consent was given");
                 window["optimizely"].push({
