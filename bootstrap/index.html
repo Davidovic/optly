@@ -1,29 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="https://edge.davidvanderlinde.com/edge-client/v1/20091035168/21258340120" referrerpolicy="no-referrer-when-downgrade"></script>
+        <!--<script src="https://edge.davidvanderlinde.com/edge-client/v1/20091035168/21258340120" referrerpolicy="no-referrer-when-downgrade"></script>-->
         
-        <!--
         <script>
-            
-            // getCookie function
-            function getCookie(cname) {
-              let name = cname + "=";
-              let decodedCookie = decodeURIComponent(document.cookie);
-              let ca = decodedCookie.split(';');
-              for(let i = 0; i <ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) == ' ') {
-                  c = c.substring(1);
-                }
-                if (c.indexOf(name) == 0) {
-                  return c.substring(name.length, c.length);
-                }
-              }
-              return "";
-            }
-            
-            
+    
             // Define Optimizely as an empty array if it doesn't exist yet
             window.optimizely = window.optimizely || [];
 
@@ -33,22 +14,10 @@
               "isOptOut": true
             });
            
-            // Check the OptanonConsent cookie and enable Optimizely
-            var consentGiven = getCookie("OptanonConsent");
-            if (consentGiven === "true") {
-                console.log("consent was given");
-                window["optimizely"].push({
-                    "type": "optOut",
-                    "isOptOut": false
-                });
-            } else {
-                console.log("consent was NOT given");   
-            }
         </script>
-        -->
         
         <!-- Add the Optimizely snippet -->        
-        <!--<script src="https://cdn.optimizely.com/js/20091035168.js"></script>-->
+        <script src="https://cdn.optimizely.com/js/20091035168.js"></script>
         
 
         <!-- Google Tag Manager -->
