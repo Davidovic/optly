@@ -5,8 +5,12 @@
         <!--<script src="https://edge.davidvanderlinde.com/edge-client/v1/20091035168/21258340120" referrerpolicy="no-referrer-when-downgrade"></script>-->
 
         <script>
-            window.optimizely.push({
-              "type": "disable"
+            // ensures the optimizely object is defined globally
+            window['optimizely'] = window['optimizely'] || [];
+            
+            // sends the activate push to the Optimizely snippet
+            window["optimizely"].push({
+              "type": "activate"
             });
         </script>
         
