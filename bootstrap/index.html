@@ -3,6 +3,10 @@
     <head>
         <!-- Add the Optimizely EDGE snippet -->        
         <!--<script src="https://edge.davidvanderlinde.com/edge-client/v1/20091035168/21258340120" referrerpolicy="no-referrer-when-downgrade"></script>-->
+
+        window.optimizely.push({
+          "type": "disable"
+        });
         
         <!-- Add the Optimizely WEB snippet -->        
         <script src="https://cdn.optimizely.com/js/20091035168.js"></script>
