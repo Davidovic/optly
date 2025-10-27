@@ -30,14 +30,8 @@ var attributes = {
 // Set user ID
 var userId = getCookie('userId');
 
-user.setForcedDecision({ 'flag-1', null }, 'variation-a');
-optimizelyClient.setForcedVariation('carousel_experiment', 'davidY', 'on_2000');
-
 // Create user context with the userId and attributes
 var user = optimizelyClient.createUserContext(userId, attributes);
-
-// force decision   
-// user.setForcedDecision({ 'carousel', 'carousel_experiment' }, 'on_2000');
 
 // Get all decisions for this user
 var decisions = user.decideAll();
